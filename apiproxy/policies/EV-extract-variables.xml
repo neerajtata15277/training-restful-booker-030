@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="EV-extract-variables">
+    <DisplayName>EV-extract-variables</DisplayName>
+    <Properties/>
+   
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="{extract_into_var}">
+            <JSONPath>{json_path}</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <XMLPayload stopPayloadProcessing="false">
+        <Namespaces/>
+        <Variable name="{extract_into_var}">
+            <XPath>//test/example</XPath>
+        </Variable>
+    </XMLPayload>
+    <Source clearPayload="false">AccessEntity.AE.access-entity</Source>
+    <VariablePrefix>ratelimit</VariablePrefix>
+</ExtractVariables>
